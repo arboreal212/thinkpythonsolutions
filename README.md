@@ -60,7 +60,7 @@ do_four(print_twice, 'spam')
 ```
 *Exercise 3.5. This exercise can be done using only the statements and other features we have learned so far.
 1. Write a function that draws a grid like the following:*
-
+```
 + - - - - + - - - - +
 |         |         |
 |         |         |
@@ -73,6 +73,7 @@ do_four(print_twice, 'spam')
 |         |         |
 + - - - - + - - - - +
 
+```
 ```
 def do_twice(f):
     f()
