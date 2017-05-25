@@ -58,7 +58,56 @@ def do_four(f,num):
 do_four(print_twice, 'spam')
     
 ```
+*Exercise 3.5. This exercise can be done using only the statements and other features we have learned so far.
+1. Write a function that draws a grid like the following:*
 
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+
+```
+def do_twice(f):
+    f()
+    f()
+    
+ def do_four(f):
+    do_twice(f)
+    do_twice(f)
+    
+def print_beam():
+    print ('+ - - - -', end= ' '),
+    
+do_twice(print_beam)
+
+def print_post():
+    print ('|        ', end=' '),
+    
+def print_beams():
+    do_twice(print_beam)
+    print ('+')
+
+def print_posts():
+    do_twice(print_post)
+    print ('|') 
+    
+def print_rows():
+    print_beams()
+    do_four(print_posts)
+
+def print_grid():
+    do_twice(print_rows)
+    print_beams()
+
+print_grid()
+    
 
     
 
